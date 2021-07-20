@@ -31,20 +31,17 @@ console.groupEnd();
 //codigo de la circunferencia
 console.group("Circulos");
 
-//Diametro
 function diametroCirculo(radio)
 {
     return radio * 2;
 }
 
-//circunferencia
 function perimetroCirculo(radio)
 {
     const diametro = diametroCirculo(radio);
     return diametro * Math.PI;
 }
 
-//area
 function areaCirculo(radio)
 {
     return (radio * radio) * Math.PI;
@@ -102,3 +99,29 @@ function calcularAreaTriangulo()
 }
 
 //Circulo HTML
+function calcularDiametroCirculo()
+{
+    const inputRadio = document.getElementById("InputCirculo");
+    const valueRadio = parseFloat(inputRadio.value);
+
+    const diametro = diametroCirculo(valueRadio);
+    alert(diametro);
+}
+
+function calcularPerimetroCirculo()
+{
+    const inputRadio = document.getElementById("InputCirculo");
+    const valueRadio = parseFloat(inputRadio.value);
+
+    const perimetro = perimetroCirculo(valueRadio);
+    alert(perimetro);
+}
+
+function calcularAreaCirculo()
+{
+    const inputRadio = document.getElementById("InputCirculo");
+    const valueRadio = parseFloat(inputRadio.value);
+
+    const area = areaCirculo(valueRadio);
+    alert(area);
+}
