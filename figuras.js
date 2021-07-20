@@ -125,3 +125,35 @@ function calcularAreaCirculo()
     const area = areaCirculo(valueRadio);
     alert(area);
 }
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+
+//codigo del triangulo isósceles
+function alturaTrianguloIsosceles(lado1,lado2,ladoBase)
+{
+    if(lado1 == lado2 && lado1 != ladoBase)
+    {
+        const alturaTriangulo = Math.sqrt(((lado1*lado1) - (ladoBase*ladoBase)) / 4);
+        alert("Es un triangulo isósceles con altura de: " + alturaTriangulo);
+    }
+    else
+    {
+        alert("No es un triangulo isósceles, intenta de nuevo");
+    }
+}
+
+function calcularAlturaTriangulo()
+{
+    const input1 = document.getElementById("InputTriangulo-1");
+    const value1 = parseFloat(input1.value);
+
+    const input2 = document.getElementById("InputTriangulo-2");
+    const value2 = parseFloat(input2.value);
+    
+    const input3 = document.getElementById("InputTriangulo-3");
+    const value3 = parseFloat(input3.value);
+
+    alturaTrianguloIsosceles(value1,value2,value3);
+}
