@@ -18,3 +18,16 @@ function calcularPrecioConDescuento(precio, descuento)
 
     return precioConDescuento;
 }
+
+function onClickButtonPriceDiscount()
+{
+    const inputPrice = document.getElementById("inputPrice");
+    const priceValue = inputPrice.value;
+
+    const inputDiscount = document.getElementById("inputDiscount");
+    const discountValue = inputDiscount.value;
+
+    const precioConDescuento = calcularPrecioConDescuento(priceValue, discountValue);
+    const resultP = document.getElementById("ResultPrice");
+    resultP.innerText = "El precio con descuento son: $" + precioConDescuento
+}
